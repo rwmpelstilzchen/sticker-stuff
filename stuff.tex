@@ -1,5 +1,5 @@
 \documentclass{article}
-\usepackage[a4paper,landscape,margin=0.75cm]{geometry}
+\usepackage[a4paper,landscape,margin=0.5cm]{geometry}
 \pagestyle{empty}
 
 \setlength\parskip{0pt}
@@ -16,53 +16,27 @@
 \newcommand{\ordigi}[4]{%
 	\parbox[b]{12.0cm}{\middlebox{#1}~#2}
 	\parbox[b]{11.0cm}{#3}
-	\parbox[b]{5cm}{#4}
+	\parbox[b]{5.5cm}{#4}
 	\vspace{-0.5cm}
 }
 
-%{\fontspec{Symbola}☜}
 \newcommand{\cxirkauxi}[1]{\resizebox{1em}{!}{\pbox{100cm}{\begin{tikzpicture}\node[circle, draw, inner sep=0.1cm, line width=2pt] {\resizebox{1em}{!}{#1}};\end{tikzpicture}}}}
+\newcommand{\senpaga}{\textsuperscript{\fontspec{Entypo}\hspace{0.1em}♥}}
 
 \newcommand{\hl}[1]{\textbf{#1}}
 
 
-\newcommand{\senpaga}{\textsuperscript{\fontspec{Entypo}\hspace{0.1em}♥}}
-
 \usepackage{fontspec}
 \usepackage{bidi}
 
-\setmainfont[Script=Hebrew]{Guttman Hatzvi}
-\setmainfont[Script=Hebrew]{Haim new}
 \setmainfont[Script=Hebrew]{Carmelit}
 \newcommand{\url}[1]{\LR{\fontspec{Fontin Sans}#1}}
-
-
-\newfontfamily{\MerxSubstFont}[Script=Hebrew]{David CLM}
-\XeTeXinterchartokenstate=1
-\newXeTeXintercharclass\MerxSubst
-\XeTeXcharclass"2019=\MerxSubst
-\XeTeXcharclass"201A=\MerxSubst
-\XeTeXcharclass"201D=\MerxSubst
-\XeTeXcharclass"201E=\MerxSubst
-\XeTeXinterchartoks 0 \MerxSubst = {\begingroup\MerxSubstFont}
-\XeTeXinterchartoks 255 \MerxSubst = {\begingroup\MerxSubstFont}
-\XeTeXinterchartoks \MerxSubst 0 = {\endgroup}
-\XeTeXinterchartoks \MerxSubst 255 = {\endgroup}
 
 \begin{document}
 \setRL
 
-%\fontspec[Script=Hebrew]{Rutz_OE Regular Pro}
-%
-%
-%
-%
-
-
 \begin{tikzpicture}
-\pgfsetcornersarced{\pgfpoint{5mm}{5mm}}
-
-	\node[rectangle callout, fill, callout relative pointer={(-2cm,-1cm)}, callout pointer width=2cm, rounded corners=0.5cm, inner sep=0.75cm, text width=0.96\textwidth] {\color{white}
+	\node[rectangle callout, fill, callout relative pointer={(-2cm,-1cm)}, callout pointer width=2cm, rounded corners=0.5cm, inner sep=0.75cm, text width=0.95\textwidth] {\color{white}
 			\setRL\setmainfont[Script=Hebrew, AutoFakeBold=2]{Untitled1}
 			\textfill{{מה{\fontspec[Script=Hebrew]{Alef},} לא חבל {לזרוק חפצים} לפח}}
 			\textfill{כשאפשר לתת ולקבל חפצים {בחינם}{\senpaga}?}
@@ -75,31 +49,40 @@
 
 \ordigi
 {{\senpaga}\cxirkauxi{\fontspec{Entypo}🔄}}
-{באירועי „מתחלפים בגבעה”}
-{ב\hl{ארטישוק} ({\fontsize{12}{12}\selectfont\parbox[b]{2.3cm}{\centering מאחורי\\המרכז המסחרי}}(}
-%\middlebox{\fontsize{15}{15}\selectfont\RL{(מאחורי המרכז המסחרי)}}}
-{\centering\fontsize{20}{20}\selectfont\middlebox{050-5658042} \fontsize{15}{15}\selectfont\middlebox{(סמדר)}}
+{כל כמה חודשים,}
+{באירועי \hl{מתחלפים בגבעה}}
+{\centering\fontsize{20}{20}\selectfont{050-5658042} \fontsize{15}{15}\selectfont{(סמדר)}}
 
 \ordigi
 {{\senpaga}\cxirkauxi{\fontspec{Entypo}🔄}}
 {שישי הראשון בכל חודש,}
 {שוק חופשי ב\hl{זנגביל} ({\fontsize{12}{12}\selectfont\parbox[b]{2.4cm}{\centering בלפור 8, רחביה\\02-5665737}}(}
 {~\hfill
-	\middlebox{\pbox[t]{100cm}{\fontsize{16}{16}\selectfont\mbox{\url{ginger.org.il}}}}
+	\middlebox{\pbox[t]{100cm}{\fontsize{15}{15}\selectfont\mbox{\url{ginger.org.il}}}}
 	\middlebox{\includegraphics[height=1.5cm]{zangvil.png}}
 }
 
 \ordigi
 {{\senpaga}\cxirkauxi{\fontspec{Entypo}🌎}}
-{בכל זמן, מהבית,}
-{באתר \hl{אגורה}}
+{בכל זמן, דרך האינטרנט,}
+{באתר \hl{אגורה}}%{\fontsize{20}{20}\selectfont (נתינה/קבלה)}}
 {~\hfill
-	\middlebox{\pbox[t]{100cm}{\fontsize{16}{16}\selectfont\mbox{\url{agora.co.il}}}}
+	\middlebox{\pbox[t]{100cm}{\fontsize{15}{15}\selectfont\mbox{\url{agora.co.il}}}}
 	\middlebox{\includegraphics[height=1.5cm]{agora.png}}
 }
 
 \ordigi
-{{\senpaga}\cxirkauxi{\fontspec{Entypo}}}
+{{\senpaga}\cxirkauxi{\fontspec{Entypo}🌎}}
+{בכל זמן, דרך האינטרנט,}
+{באתר \hl{המפקיד} {\fontsize{20}{20}\selectfont (בהשאלה)}}
+{~\hfill
+	\middlebox{\pbox[t]{100cm}{\fontsize{15}{15}\selectfont\mbox{\url{hamafkid.com}}}}
+	\middlebox{\includegraphics[height=1.5cm]{hamafkid.png}}
+}
+
+\ordigi
+%{{\senpaga}\cxirkauxi{\fontspec{Entypo}}}
+{{\senpaga}\cxirkauxi{\fontspec{Symbola}👗}}
 {בכל זמן אפשר לתת בגדים}
 {במכולה ב\hl{מרכז המִחזור}}
 {\centering\middlebox{\fontsize{15}{15}\selectfont\parbox[b]{4cm}{\centering התחנה הסופית של\\קו~4 במבוא העשׂרה}}}
@@ -108,7 +91,16 @@
 {\phantom{{\senpaga}}\cxirkauxi{\fontspec{FreeSerif}✌}}
 {א׳—ה׳, 9:00—19:00}
 {בחנות \hl{כחדש} ({\fontsize{12}{12}\selectfont\parbox[b]{2.4cm}{\centering המרכז המסחרי,\\קומה שניה}}(}
-{\centering\fontsize{23}{23}\selectfont\middlebox{02-5817397}}
+{\centering\fontsize{23}{23}\selectfont{02-5817397}}
+
+\ordigi
+{\phantom{{\senpaga}}\cxirkauxi{\fontspec{FreeSerif}✌}}
+{בכל זמן, דרך האינטרנט,}
+{באתר \hl{יד2}}
+{~\hfill
+	\middlebox{\pbox[t]{100cm}{\fontsize{15}{15}\selectfont\mbox{\url{yad2.co.il/Yad2}}}}
+	\middlebox{\includegraphics[height=1.5cm]{yad2.png}}
+}
 
 \ordigi
 {\phantom{{\senpaga}}\cxirkauxi{\fontspec{Entypo}📣}}
@@ -116,4 +108,13 @@
 {כש\hl{אלטע זאכן} עובר… {\fontspec{Symbola}☺}}
 {}
 
+\vspace{0.6cm}
+
+{
+	\fontsize{12}{12}\selectfont
+	שימו~{\fontspec{Entypo}♥}: להניח חפצים ליד הפח זאת דרך נהדרת, אלא שמה שלא נלקח מספיק מהר מפונה, וחבל.
+	\hfill
+	המדבקות הן יוזמה עצמאית מקומית, לא מטעם אף אחד מהנ״ל.
+}
+ 
 \end{document}
