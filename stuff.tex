@@ -8,20 +8,34 @@
 \usepackage{graphicx, xcolor}
 \usepackage{tikz}
 \usetikzlibrary{shapes.callouts}
+\newcommand{\qrcode}[1]{\middlebox{\includegraphics[height=1.3cm]{#1.png}}}
 
 \newcommand{\textfill}[1]{\resizebox{\linewidth}{!}{#1}}
 \usepackage{pbox, lettrine}
 \newcommand{\middlebox}[1]{$\vcenter{\hbox{#1}}$}
 
+\newcommand{\ordigibaza}[4]{%
+	\begin{minipage}[b][1.1cm]{\linewidth}
+		\parbox[c]{11.4cm}{\middlebox{#1} #2}
+		{#3\hfill#4}
+	\end{minipage}
+}
+
 \newcommand{\ordigi}[4]{%
-	\parbox[b]{12.0cm}{\middlebox{#1}~#2}
-	\parbox[b]{11.0cm}{#3}
-	\parbox[b]{5.5cm}{#4}
-	\vspace{-0.5cm}
+	\ordigibaza{#1}{#2}{#3}{#4}
+	\vspace{-0.5\baselineskip}
+	\textcolor{gray}{\hrule}
+	\vspace{-0.2\baselineskip}
+}
+
+\newcommand{\ordigilaston}[4]{%
+	\ordigibaza{#1}{#2}{#3}{#4}
+	\vspace{-0.7\baselineskip}
 }
 
 \newcommand{\cxirkauxi}[1]{\resizebox{1em}{!}{\pbox{100cm}{\begin{tikzpicture}\node[circle, draw, inner sep=0.1cm, line width=2pt] {\resizebox{1em}{!}{#1}};\end{tikzpicture}}}}
 \newcommand{\senpaga}{\textsuperscript{\fontspec{Entypo}\hspace{0.1em}♥}}
+\newcommand{\paga}{\textsuperscript{\hspace{0.05em}\fontsize{12}{12}\selectfont ₪}\hspace{0.05em}}
 
 \newcommand{\hl}[1]{\textbf{#1}}
 
@@ -49,7 +63,7 @@
 
 \ordigi
 {{\senpaga}\cxirkauxi{\fontspec{Entypo}🔄}}
-{כל כמה חודשים,}
+{אחת לכמה חודשים,}
 {באירועי \hl{מתחלפים בגבעה}}
 {\centering\fontsize{20}{20}\selectfont{050-5658042} \fontsize{15}{15}\selectfont{(סמדר)}}
 
@@ -59,56 +73,56 @@
 {שוק חופשי ב\hl{זנגביל} ({\fontsize{12}{12}\selectfont\parbox[b]{2.4cm}{\centering בלפור 8, רחביה\\02-5665737}}(}
 {~\hfill
 	\middlebox{\pbox[t]{100cm}{\fontsize{15}{15}\selectfont\mbox{\url{ginger.org.il}}}}
-	\middlebox{\includegraphics[height=1.5cm]{zangvil.png}}
+	\qrcode{zangvil}
 }
 
 \ordigi
-{{\senpaga}\cxirkauxi{\fontspec{Entypo}🌎}}
+{{\senpaga}\cxirkauxi{\fontspec{Guttman Hodes}\parbox{1em}{\centering 1\\\small אגורה}}}
 {בכל זמן, דרך האינטרנט,}
-{באתר \hl{אגורה}}%{\fontsize{20}{20}\selectfont (נתינה/קבלה)}}
+{באתר \hl{אגורה} {\fontsize{20}{20}\selectfont (לקבל ו/או לתת בחינם)}}%{\fontsize{20}{20}\selectfont (נתינה/קבלה)}}
 {~\hfill
 	\middlebox{\pbox[t]{100cm}{\fontsize{15}{15}\selectfont\mbox{\url{agora.co.il}}}}
-	\middlebox{\includegraphics[height=1.5cm]{agora.png}}
+	\qrcode{agora}
 }
 
 \ordigi
-{{\senpaga}\cxirkauxi{\fontspec{Entypo}🌎}}
+{{\senpaga}\cxirkauxi{\fontspec{Symbola}🕓}}
 {בכל זמן, דרך האינטרנט,}
 {באתר \hl{המפקיד} {\fontsize{20}{20}\selectfont (בהשאלה)}}
 {~\hfill
 	\middlebox{\pbox[t]{100cm}{\fontsize{15}{15}\selectfont\mbox{\url{hamafkid.com}}}}
-	\middlebox{\includegraphics[height=1.5cm]{hamafkid.png}}
+	\qrcode{hamafkid}
 }
 
 \ordigi
 %{{\senpaga}\cxirkauxi{\fontspec{Entypo}}}
 {{\senpaga}\cxirkauxi{\fontspec{Symbola}👗}}
 {בכל זמן אפשר לתת בגדים}
-{במכולה ב\hl{מרכז המִחזור}}
-{\centering\middlebox{\fontsize{15}{15}\selectfont\parbox[b]{4cm}{\centering התחנה הסופית של\\קו~4 במבוא העשׂרה}}}
+{במכולה ב\hl{מרכז המִחזור} ({\fontsize{12}{12}\selectfont\parbox[b]{3cm}{\centering התחנה הסופית של\\קו~4 במבוא העשׂרה}}(}
+{}
 
 \ordigi
-{\phantom{{\senpaga}}\cxirkauxi{\fontspec{FreeSerif}✌}}
+{\paga\cxirkauxi{\fontspec{FreeSerif}✌}}
 {א׳—ה׳, 9:00—19:00}
 {בחנות \hl{כחדש} ({\fontsize{12}{12}\selectfont\parbox[b]{2.4cm}{\centering המרכז המסחרי,\\קומה שניה}}(}
-{\centering\fontsize{23}{23}\selectfont{02-5817397}}
+{\fontsize{20}{20}\selectfont{02-5817397}\hspace{1cm}~}
 
 \ordigi
-{\phantom{{\senpaga}}\cxirkauxi{\fontspec{FreeSerif}✌}}
+{\paga\cxirkauxi{\fontspec{FreeSerif}✌}}
 {בכל זמן, דרך האינטרנט,}
 {באתר \hl{יד2}}
 {~\hfill
 	\middlebox{\pbox[t]{100cm}{\fontsize{15}{15}\selectfont\mbox{\url{yad2.co.il/Yad2}}}}
-	\middlebox{\includegraphics[height=1.5cm]{yad2.png}}
+	\qrcode{yad2}
 }
 
-\ordigi
-{\phantom{{\senpaga}}\cxirkauxi{\fontspec{Entypo}📣}}
+\ordigilaston
+{\paga\cxirkauxi{\fontspec{Entypo}📣}}
 {}
 {כש\hl{אלטע זאכן} עובר… {\fontspec{Symbola}☺}}
 {}
 
-\vspace{0.6cm}
+\vfill
 
 {
 	\fontsize{12}{12}\selectfont
@@ -117,4 +131,6 @@
 	המדבקות הן יוזמה עצמאית מקומית, לא מטעם אף אחד מהנ״ל.
 }
  
+\vfill
+
 \end{document}
